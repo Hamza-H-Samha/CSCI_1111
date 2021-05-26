@@ -12,9 +12,9 @@ public static void main(String[] args){
         accounts[i].setID(i);
         accounts[i].setBalance(100);
       }
-      while(options != 'Q' && options !='q'){
+      while(true){
         if( (id<=9 && id >=0) && (options != 'Q'|| options != 'q')){
-          System.out.println("Please Pick a valid option"+"\n"+"D to Deposit"+"\n"+"W To Withdraw"+"\n"+"B to BalanceCheck"+"\n"+"Q to Quit");
+          System.out.println("Please Pick a valid option"+"\n"+"D to Deposit"+"\n"+"W To Withdraw"+"\n"+"B to BalanceCheck"+"\n"+"C to Log of your account"+"\n"+"Q to Quit");
           options= k.next().charAt(0);
           if((options == 'D'|| options == 'd')){
                         System.out.println("How Much Do you want to Deposit");
@@ -35,7 +35,17 @@ public static void main(String[] args){
             else if(options == 'Q'|| options == 'q'){
             System.out.println("Quiting from your account");
 
+
+
             }
+            else if(options == 'c'|| options == 'C'){
+            System.out.println("Logging out of your account");
+            System.out.println("Please Type your Idenification number between 0 to 9");
+            id= k.nextInt();
+
+
+            }
+
             else{
               System.out.println("Invalid Letter Please Try Again");
               options= k.next().charAt(0);
